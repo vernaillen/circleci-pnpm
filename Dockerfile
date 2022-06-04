@@ -1,4 +1,5 @@
-FROM cimg/node:12.22.1
+FROM cimg/node:18.2.0
 
-RUN curl -f https://get.pnpm.io/v6.js | sudo node - add --global pnpm
-
+RUN curl -fsSL https://get.pnpm.io/install.sh | sh -
+RUN npm i -g pnpm
+RUN node - add --global pnpm
